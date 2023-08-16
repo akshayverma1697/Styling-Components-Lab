@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
+//import styled from 'styled-components';
 
 import Button from '../../UI/Button/Button';
-import './CourseInput.css';
+import styles from './CourseInput.module.css';
 
 /* tagged template literal for form control div, 
 lines 17, 23, and 24 will change the color schema 
 depending on the pointer function "invalid" */
-const FormControl = styled.div`
+/* const FormControl = styled.div`
     margin: 0.5rem 0;
 
   & label {
@@ -32,7 +32,7 @@ const FormControl = styled.div`
     background: #fad0ec;
     border-color: #8b005d;
   }
-`;
+`; */
 
 const CourseInput = props => {
   const [enteredValue, setEnteredValue] = useState('');
@@ -58,10 +58,11 @@ const CourseInput = props => {
       and then use a pointer function "invalid" to change between colors 
       depending on whether or not the boolean isValid is true or false
       depending on user input after clicking the add goal button*/}
-      <FormControl invalid={!isValid}>
+      {/* <FormControl invalid={!isValid}> */}
+      <div className={`${styles['form-control']} ${!isValid && styles.invalid}`}>
         <label>Course Goal</label>
         <input type="text" onChange={goalInputChangeHandler} />
-      </FormControl>
+      </div>
       <Button type="submit">Add Goal</Button>
     </form>
   );
