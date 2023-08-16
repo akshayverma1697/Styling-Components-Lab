@@ -54,7 +54,7 @@ const CourseInput = props => {
 
   return (
     <form onSubmit={formSubmitHandler}>
-      {/* Line 59 will implement the tagged template literal "FormControl"
+      {/* Line 61 will implement the tagged template literal "FormControl"
       and then use a pointer function "invalid" to change between colors 
       depending on whether or not the boolean isValid is true or false
       depending on user input after clicking the add goal button*/}
