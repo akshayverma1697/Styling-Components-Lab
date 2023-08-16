@@ -26,9 +26,9 @@ const CourseInput = props => {
       {/* Line 27 will set the boolean isValid to true or false 
         based on the arguments in goalInputHandler and will then 
         dynamically style the Input Label and text field */}
-      <div className={`form-control ${!isValid ? 'invalid' : ''}`}> 
+      <div className={`form-control ${!isValid ? 'invalid' : ''}`}>
         <label>Course Goal</label>
-        <input type="text"onChange={goalInputChangeHandler}/>
+        <input type="text" onChange={goalInputChangeHandler} />
       </div>
       <Button type="submit">Add Goal</Button>
     </form>
